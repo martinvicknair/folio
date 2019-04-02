@@ -1,26 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Button, Card, Nav } from 'react-bootstrap';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Card>
+  <Card.Header>
+    <Nav variant="tabs" defaultActiveKey="#first">
+      <Nav.Item>
+        <Nav.Link href="#first">Active</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link href="#link">Link</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link href="#disabled" disabled>
+          Disabled
+        </Nav.Link>
+      </Nav.Item>
+    </Nav>
+  </Card.Header>
+  <Card.Body>
+    <Card.Title>Special title treatment</Card.Title>
+    <Card.Text>
+      With supporting text below as a natural lead-in to additional content.
+    </Card.Text>
+    <Button variant="primary">Go somewhere</Button>
+  </Card.Body>
+</Card>
     );
   }
 }
